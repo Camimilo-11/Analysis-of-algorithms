@@ -1,16 +1,3 @@
-/*
-    Analysis of Algorithms - Lab 04
-    Punto 3: Breadth First Search (BFS)
-    Autor: Camilo
-
-    Estructura de datos elegida: LISTA DE ADYACENCIA.
-    Razon: igual que en DFS, con lista el recorrido es Theta(|V|+|E|)
-    frente a Theta(V^2) de la matriz, y no se desperdicia memoria en
-    las parejas de vertices que no estan conectadas.
-
-    Compilar: g++ Assigment04_pt3.cpp -o bfs
-*/
-
 #include <iostream>
 #include <vector>
 #include <queue>
