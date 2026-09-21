@@ -1,10 +1,7 @@
 /*
- * Analysis of Algorithms - Lab 05: Sorting and Graph Theory
- * Yachay Tech University
- * Professor: Israel Pineda, Ph.D.
- * 
- * Solutions for Problem 1 (Insertion Sort for Characters) 
- * and Problem 2 (Binary Search vs Interpolation Search with 10M elements)
+ *Camilo Vasquez
+ * Problem 1 -Insertion Sort for Characters)
+ * Problem 2 -Binary Search vs Interpolation Search with 10M elements
  */
 
 #include <iostream>
@@ -14,9 +11,8 @@
 #include <chrono>
 #include <iomanip>
 
-// ============================================================================
 // PROBLEM 1: Insertion Sort for Alphabetic Characters
-// ============================================================================
+
 void insertionSort(std::vector<char>& arr) {
     int n = arr.size();
     for (int i = 1; i < n; ++i) {
@@ -32,10 +28,7 @@ void insertionSort(std::vector<char>& arr) {
 }
 
 void runProblem1() {
-    std::cout << "====================================================\n";
     std::cout << "PROBLEM 1: Insertion Sort for Alphabetic Characters\n";
-    std::cout << "====================================================\n";
-    
     const int N = 20;
     std::vector<char> characters(N);
     
@@ -58,9 +51,8 @@ void runProblem1() {
     std::cout << "\n\n";
 }
 
-// ============================================================================
-// PROBLEM 2: Binary Search vs Interpolation Search (10,000,000 elements)
-// ============================================================================
+// PROBLEM 2: Binary Search vs Interpolation Search 10,000,000 elements
+
 int binarySearch(const std::vector<int>& arr, int key) {
     int l = 0, r = arr.size() - 1;
     while (l <= r) {
@@ -87,9 +79,7 @@ int interpolationSearch(const std::vector<int>& arr, int key) {
 }
 
 void runProblem2() {
-    std::cout << "====================================================\n";
     std::cout << "PROBLEM 2: Binary Search vs Interpolation Search\n";
-    std::cout << "====================================================\n";
     
     const int N = 10000000; // 10 million elements
     std::cout << "Generating " << N << " random integers...\n";
@@ -119,7 +109,7 @@ void runProblem2() {
     auto endIS = std::chrono::high_resolution_clock::now();
     std::chrono::duration<double, std::nano> durationIS = endIS - startIS;
     
-    std::cout << "\n--- BENCHMARK RESULTS ---\n";
+    std::cout << "\nA BENCHMARK RESULTS \n";
     std::cout << "Binary Search:        Index = " << idxBS 
               << " | Time: " << durationBS.count() << " ns\n";
     std::cout << "Interpolation Search: Index = " << idxIS 
